@@ -12,7 +12,7 @@ def import_data(import_folder):
             print(filepath)
             with open(filepath, "rb") as fd:
                 data_file = np.load(fd, allow_pickle=True)
-                data[file_name[:-3]] = data_file
+                data[file_name[:-4]] = data_file
             # end with
         # end for
     # end for
@@ -44,7 +44,7 @@ def  plot_convergence(dataset_name, dataset, export_folder):
     
     filepath = os.path.join(export_folder, dataset_name+'.jpeg')
     plt.savefig(filepath)
-    #plt.show()
+    plt.close()
 # end def
 
 if __name__ == "__main__":
