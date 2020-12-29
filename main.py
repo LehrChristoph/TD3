@@ -1,6 +1,8 @@
 import numpy as np
 import torch
 import gym
+import pybullet
+import pybullet_envs
 import argparse
 import os
 
