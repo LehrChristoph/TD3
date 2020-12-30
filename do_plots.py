@@ -31,7 +31,7 @@ def generate_figures(datasets, export_folder):
 # end def
 
 def  plot_convergence(dataset_name, dataset, export_folder):
-    eval_iter = 2000
+    eval_iter = 5000
     x_axis =  np.arange(0, eval_iter*len(dataset), eval_iter)
     plt.plot(x_axis, dataset)
     
