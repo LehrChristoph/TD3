@@ -39,7 +39,7 @@ def  plot_convergence(dataset_name, dataset, export_folder):
     
     plt.ylabel('Reward')
     plt.xlabel('Timesteps')
-    plt.xlim(min(x_axis), max(x_axis))
+    plt.xlim(min(x_axis), min(max(x_axis), 200000))
     plt.ylim(0, 1010)
     
     filepath = os.path.join(export_folder, dataset_name+'.jpeg')
