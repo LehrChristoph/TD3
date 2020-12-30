@@ -5,7 +5,6 @@ import pybullet
 import pybullet_envs
 import argparse
 import os
-
 import utils
 import TD3
 import OurDDPG
@@ -22,7 +21,6 @@ def eval_policy(policy, env_name, seed, eval_episodes=10):
 	for _ in range(eval_episodes):
 		state, done = eval_env.reset(), False
 		while not done:
-			eval_env.render()
 			action = policy.select_action(np.array(state))
 			state, reward, done, _ = eval_env.step(action)
 			avg_reward += reward
